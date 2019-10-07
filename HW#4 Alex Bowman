@@ -1,0 +1,52 @@
+/*Alex Bowman
+ * HW#4
+ * Professor Silvestri
+ * 10/7
+ *  Write a program that reads a
+ *  letter and displays its corresponding digit.
+ *  */
+import java.util.Scanner;
+
+public class tele {
+	
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		System.out.println("This progrgam takes in a character from the user and displays a digit from the keypad.\n");
+		System.out.println("Enter a letter: ");
+		String letter = input.nextLine().trim();
+		if (letter.length() != 1) {
+			System.out.println("You must enter only one character");
+			return;
+		}
+		char ch = Character.toUpperCase(letter.charAt(0));
+
+		if (ch >= 'A' && ch <= 'C') {
+
+			System.out.println("2");
+		} else if (ch >= 'D' && ch <= 'F') {
+
+			System.out.println("3");
+		} else if (ch >= 'G' && ch <= 'I') {
+
+			System.out.println("4");
+		} else if (ch >= 'J' && ch <= 'L') {
+
+			System.out.println("5");
+		} else if (ch >= 'M' && ch <= 'O') {
+
+			System.out.println("6");
+		} else if (ch >= 'P' && ch <= 'S') {
+
+			System.out.println("7");
+		} else if (ch >= 'T' && ch <= 'V') {
+
+			System.out.println("8");
+		} else if (ch >= 'W' && ch <= 'Z') {
+
+			System.out.println("9");
+		} else {
+			System.out.println("please enter a character from A to Z: ");
+		}
+	}
+}
